@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: '@project.name@'
+  profiles:
+    active: local
+
+---
+
+spring:
+  profiles: local
+
+  kafka:
+
+    topic: ordertopic
+    bootstrap-servers: localhost:29092
+    group-id: group_id
+    auto-offset: earliest
+
+server:
+  port: 8086

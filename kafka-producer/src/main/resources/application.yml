@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: '@project.name@'
+  profiles:
+    active: local
+
+---
+
+spring:
+  profiles: local
+
+  kafka:
+    topic: ordertopic
+    bootstrap-servers: localhost:29092
+
+server:
+  port: 8087
